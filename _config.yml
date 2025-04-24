@@ -1,1 +1,5 @@
-theme: minima
+title: Patrick's Blog
+remote_theme: lorepirri/cayman-blog
+markdown: kramdown
+highlighter: rouge
+color_scheme: light
