@@ -52,12 +52,12 @@
 
 <!-- Twitter summary card with large image must be at least 280x150px -->
 
-<meta name="twitter:url" content="http://localhost:4000//2025/04/23/cm-basics.html" />
+<meta name="twitter:url" content="/2025/04/23/cm-basics.html" />
 
 <!-- Open Graph data -->
 <meta property="og:title" content="SQLcl Connection Manager - The Basics" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000//2025/04/23/cm-basics.html" />
+<meta property="og:url" content="/2025/04/23/cm-basics.html" />
 
 
 <meta property="og:description" content="The connection manager is a tool built into SQLcl to manage connections (as the name would imply). We can use conmgr or cm if we want to save some typing. First let’s validate that there are no configured connections." />
@@ -89,11 +89,11 @@
 
     
     
-    <link rel="canonical" href="http://localhost:4000/2025/04/23/cm-basics.html">
+    <link rel="canonical" href="/2025/04/23/cm-basics.html">
     
     
     
-    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     
     <meta name="robots" content="noarchive">
     
@@ -101,7 +101,7 @@
         <link rel="alternate" media="handheld" href=""> -->
         
         
-        <link rel="stylesheet" href="http://localhost:4000/assets/css/style.css?v=d5366c1f5bd7b3c0fc80098dc40d963aaac126a4">
+        <link rel="stylesheet" href="/assets/css/style.css?v=bd64d342e0d79c604b88c8566025e0a6cdae51c3">
     </head>
     <body>
         
@@ -112,7 +112,7 @@
     
 
     
-      <a class="site-title" href="http://localhost:4000/">Patrick&#39;s Blog</a>
+      <a class="site-title" href="/">Patrick&#39;s Blog</a>
     
 
     
@@ -133,14 +133,14 @@
             
             
               
-                <a class="page-link" href="http://localhost:4000/">Patrick&#39;s Blog</a>
+                <a class="page-link" href="/">Patrick&#39;s Blog</a>
               
             
           
             
             
               
-                <a class="page-link" href="http://localhost:4000/">Patrick&#39;s Blog</a>
+                <a class="page-link" href="/">Patrick&#39;s Blog</a>
               
             
           
@@ -234,6 +234,7 @@ It’s worth noting that the connection details (name, connect string and redact
 <p>Now within SQLcl if we want to connect with that defined connection we can do so with the <code class="language-plaintext highlighter-rouge">-name</code> flag  for the <code class="language-plaintext highlighter-rouge">connect</code> command.</p>
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SQL</span><span class="o">&gt;</span> <span class="n">conn</span> <span class="o">-</span><span class="n">name</span> <span class="n">tom</span>
 <span class="n">Connected</span><span class="p">.</span>
+<span class="k">SQL</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
 <p>Even better, you can use the <code class="language-plaintext highlighter-rouge">-name</code> flag when launching SQLcl to connect directly using this saved connection.</p>
@@ -257,6 +258,7 @@ It’s worth noting that the connection details (name, connect string and redact
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SQL</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">user</span> <span class="n">tom</span> <span class="n">identified</span> <span class="k">by</span> <span class="n">tommy</span><span class="p">;</span>
 
 <span class="k">User</span> <span class="n">TOM</span> <span class="n">altered</span><span class="p">.</span>
+<span class="k">SQL</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
 <p>To update the saved connection, we use the <code class="language-plaintext highlighter-rouge">-save</code> and <code class="language-plaintext highlighter-rouge">-savepwd</code> flags for the <code class="language-plaintext highlighter-rouge">conn</code> command, but use the <code class="language-plaintext highlighter-rouge">-replace</code> command to overwrite the connection with the new details.</p>
@@ -270,6 +272,7 @@ It’s worth noting that the connection details (name, connect string and redact
 <span class="p">.</span>
 <span class="err">├──</span> <span class="n">tom</span>
 <span class="err">└──</span> <span class="n">tom</span>
+<span class="k">SQL</span><span class="o">&gt;</span>
 </code></pre></div></div>
 <p>Unfortunately there is currently a bug where the -replace flag doesn’t work, so we end up with two connections.
 Fortunately, a new command allows us to delete connections, so to finish off let’s delete them (both).</p>
@@ -283,6 +286,7 @@ Fortunately, a new command allows us to delete connections, so to finish off let
 <span class="k">Connection</span> <span class="n">tom</span> <span class="n">has</span> <span class="n">been</span> <span class="n">deleted</span>
 <span class="k">SQL</span><span class="o">&gt;</span> <span class="n">cm</span> <span class="n">list</span>
 <span class="p">.</span>
+<span class="k">SQL</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
   </div>
