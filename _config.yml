@@ -5,5 +5,5 @@ highlighter: rouge
 color_scheme: light
 url: "https://blog.jolliffe.hk"
 collections:
-  drafts:
+  _drafts_public:
     output: true
