@@ -4,3 +4,6 @@ markdown: kramdown
 highlighter: rouge
 color_scheme: light
 url: "https://blog.jolliffe.hk"
+collections:
+  drafts:
+    output: true
