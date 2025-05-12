@@ -1,5 +1,5 @@
 ---
-title: "SQLcl Connection Manager - Folders"
+title: "SQLcl - Connection Manager - Folders"
 date: 2025-04-23
 layout: post
 tags: sqlcl oracle
